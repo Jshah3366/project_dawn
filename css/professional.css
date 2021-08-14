@@ -1,0 +1,351 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 18px;
+}
+body{
+    background-color: #FAE9C3;
+}
+/* navigation */
+.nav{
+    background-color: #6dad93;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 4rem;
+}
+
+.nav-head{
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    color: rgb(38, 47, 17);
+    flex: 0.3;
+}
+.nav-head a{
+    padding-left: 1rem;
+}
+nav ul{
+    list-style: none;
+    flex:1;
+    display: flex;
+    text-align: center;
+    padding: 0 2rem;
+    height: 100%;
+    align-items: center;
+}
+
+nav li{
+    font-size: 1.1rem; 
+    display: flex;
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+nav a{
+    /* color: #d9fbed; */
+    color: rgb(38, 47, 17);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    width:100%;
+}
+.desktop li:hover{
+    border-bottom: 2px solid rgb(38, 47, 17);
+}
+.desktop a:hover{
+    color: rgb(38, 47, 17);
+}
+.desktop a::before {
+    content: "";
+    display: block;
+    height: 6px;
+    background-color: rgb(38, 47, 17);
+    position: absolute;
+    top: 0;
+    transition: width ease-in-out 500ms;
+    width: 0;
+}
+.desktop a:hover::before{
+    width: 100%;
+}
+.mobile{
+    display: none;
+}
+
+@media only screen and (max-width:1366px) {
+    .nav-head{
+        font-size: 1.3rem;
+        flex: 0.1;
+    }
+    nav li{
+        font-size: 1rem;
+    }
+    nav a{
+        letter-spacing: 0.1rem;
+    }
+}
+@media only screen and (max-width:800px) {
+   .nav{
+       height: 3rem;
+   }
+   .nav-mobile-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+    .nav-mobile-container img{
+        width: 40px;
+    }
+    .mobile{
+        display: flex;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile a{
+        text-align: center;    
+    }
+}
+/* profile section */
+.profile h1{
+    font-size: 2rem;
+    margin: 1rem 1.5rem;
+    letter-spacing: 0.3rem;
+}
+.profile-container{
+    display: flex;
+    overflow: scroll;
+    align-items: center;
+    background-color: #c8b895;
+    margin: 0 1rem;
+}
+.profile .img-container{
+    height: 100%;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: black;
+    margin: 1rem;
+    width: 25%;
+}
+.profile .img-container img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.profile .content{
+    flex: 1;
+    width: 75%;
+}
+.profile ul{
+    margin: 0 1rem;
+}
+.profile li{
+    list-style: circle;
+    margin: 1.5rem 1rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    text-align: justify;
+}
+#vertical{
+    display: none;
+}
+
+@media only screen and (max-width:1366px) {
+    .profile li{
+        margin: 1.5rem 1rem;
+        font-size: 1.1rem;
+        letter-spacing: 0.05rem;
+    }
+    .profile h1{
+        font-size: 2rem;
+        margin: 0.5rem 1.5rem;
+        letter-spacing: 0.3rem;
+    }
+}
+@media only screen and (max-width:1366px) {
+   
+}
+@media only screen and (max-width:950px) {
+    
+    .profile .content{
+        margin: 0.5rem;
+    }
+    .profile li{
+        font-size: 1rem;
+        line-height: 1.3rem;
+        margin: 0.5rem 0.5rem;
+    }
+    .profile h1{
+        font-size: 1.5rem;
+        text-align: center
+    }
+   
+}
+@media only screen and (max-width:800px) {
+   .profile-container{
+       flex-direction: column;
+   }
+   .profile .content{
+    width: 90%
+}
+   .profile ul{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+   }
+   .profile li{
+       margin: 0 1.5rem;
+       font-size: 1rem;
+   }
+}
+/* industry section */
+.industry h1{
+    font-size: 2rem;
+    margin: 1rem 1.5rem;
+    letter-spacing: 0.3rem;
+}
+.industry .container{
+    display: flex;
+    margin: 0 1rem;
+    align-items: center;
+    background-color: #c8b895;
+}
+.industry .img-container{
+    overflow: hidden;
+    height: 100%;
+    margin: 1rem;
+    width: 25%;
+}
+.industry .img-container img{
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+.industry .content{
+    flex: 1;
+    width: 75%;
+}
+.industry ul{
+    margin: 0 1rem;
+}
+.industry li{
+    list-style: circle;
+    margin: 1.5rem 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    text-align: justify;
+}
+
+@media only screen and (max-width:1366px) {
+    .industry li{
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+}
+
+@media only screen and (max-width:950px) {
+    
+    .industry .content{
+        margin: 0.5rem;
+    }
+    .industry h1{
+        font-size: 1.5rem;
+        text-align: center
+    }
+}
+@media only screen and (max-width:700px) {
+    
+}
+/* skills sections */
+.skills{
+    margin: 1rem;
+}
+.skills h1{
+    font-size: 2rem;
+    margin: 0.5rem 1.5rem;
+    letter-spacing: 0.3rem;
+}
+.skills h2{
+    font-size: 1.3rem;
+    letter-spacing: 0.7rem;
+    word-spacing: 0.2rem;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+}
+.skills ul{
+    margin: 1rem 0;
+}
+.skills li{
+    list-style: none;
+    padding: 0.4rem;
+    text-align: left;
+    margin-left: 2rem;
+}
+.skills .container{
+    display: flex;
+    background-color: #c8b895;
+}
+.skills .content{
+    width: 100%;
+    flex: 1;
+    text-align: center;
+}
+@media only screen and (max-width:950px) {
+
+    .skills h2{
+        letter-spacing: 0.2rem;
+    }
+}
+/* contact me section */
+.contact h2{
+    margin: 1rem;
+    font-size:1.5rem;
+    letter-spacing: 0.4rem;
+    word-spacing:1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 13rem;
+}
+.contact-img-container{
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-img-container img{
+    height: 50px;
+    width: 50px;
+    margin: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+.contact-img-container h3{
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+}
+/* footer section  */
+footer{
+    position: relative;
+}
+.footer-container{
+    background-color: #6dad93;
+    height: 4rem;
+}
+.footer-container p{
+    color:white;
+    font-weight: lighter;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 1.3rem;
+}
