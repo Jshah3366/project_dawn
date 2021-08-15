@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 18px;
+}
+body{
+    background-color: #FAE9C3;
+}
+/* navigation */
+.nav{
+    background-color: #6dad93;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 4rem;
+}
+
+.nav-head{
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    color: rgb(38, 47, 17);
+    flex: 0.3;
+}
+.nav-head a{
+    margin-left: 1rem;
+    padding: 0.5rem;
+    padding-left: 0.7rem;
+    outline: 1px solid rgb(38, 47, 17);
+}
+nav ul{
+    list-style: none;
+    flex:1;
+    display: flex;
+    text-align: center;
+    padding: 0 2rem;
+    height: 100%;
+    align-items: center;
+}
+
+nav li{
+    font-size: 1.1rem; 
+    display: flex;
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    font-weight: 650;
+}
+nav a{
+    /* color: #d9fbed; */
+    color: rgb(38, 47, 17);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    width:100%;
+}
+.desktop li:hover{
+    border-bottom: 2px solid rgb(38, 47, 17);
+}
+.desktop a:hover{
+    color: rgb(38, 47, 17);
+}
+.desktop a::before {
+    content: "";
+    display: block;
+    height: 6px;
+    background-color: rgb(38, 47, 17);
+    position: absolute;
+    top: 0;
+    transition: width ease-in-out 500ms;
+    width: 0;
+}
+.desktop a:hover::before{
+    width: 100%;
+}
+.mobile{
+    display: none;
+}
+
+@media only screen and (max-width:1366px) {
+    .nav-head{
+        font-size: 1.3rem;
+        flex: 0.1;
+    }
+    nav li{
+        font-size: 1rem;
+    }
+    nav a{
+        letter-spacing: 0.1rem;
+    }
+}
+@media only screen and (max-width:800px) {
+   .nav{
+       height: 3rem;
+   }
+   .nav-mobile-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+    .nav-mobile-container img{
+        width: 40px;
+    }
+    .mobile{
+        display: flex;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile a{
+        text-align: center;    
+    }
+}
